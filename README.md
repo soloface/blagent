@@ -170,62 +170,6 @@ curl -X POST http://localhost:3000/api/chat \
 
 ## 🚀 部署方案
 
-### Vercel 部署（推荐）
-
-项目已配置 `vercel.json`，支持一键部署到 Vercel：
-
-1. **安装 Vercel CLI**
-   ```bash
-   npm install -g vercel
-   ```
-
-2. **登录 Vercel**
-   ```bash
-   vercel login
-   ```
-
-3. **部署项目**
-   ```bash
-   vercel
-   ```
-
-4. **配置环境变量**
-   在 Vercel 控制台中设置：
-   - `BAILIAN_API_KEY`
-   - `BAILIAN_APP_ID`
-
-### Docker 部署
-
-1. **创建 Dockerfile**
-   ```dockerfile
-   FROM node:18-alpine
-   
-   WORKDIR /app
-   
-   COPY package*.json ./
-   RUN npm ci --only=production
-   
-   COPY . .
-   RUN npm run build
-   
-   EXPOSE 3000
-   
-   CMD ["npm", "start"]
-   ```
-
-2. **构建镜像**
-   ```bash
-   docker build -t blagent .
-   ```
-
-3. **运行容器**
-   ```bash
-   docker run -p 3000:3000 \
-     -e BAILIAN_API_KEY=你的API密钥 \
-     -e BAILIAN_APP_ID=你的应用ID \
-     blagent
-   ```
-
 ### 传统服务器部署
 
 1. **上传代码到服务器**
@@ -330,9 +274,3 @@ curl -X POST http://localhost:3000/api/chat \
 ## 🤝 贡献
 
 欢迎提交 Issue 和 Pull Request！
-
-## 📞 支持
-
-如有问题，请通过以下方式联系：
-- 提交 GitHub Issue
-- 发送邮件至：[你的邮箱]
