@@ -1,0 +1,26 @@
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #2c2f33;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #fff;
+}
+.custom-thead .custom-th {
+  background-color: #36393f;
+  font-weight: bold;
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #4a4d51;
+}
+.custom-tbody .custom-tr {
+  border-bottom: 1px solid #4a4d51;
+}
+.custom-tbody .custom-tr:last-child {
+  border-bottom: none;
+}
+.custom-td {
+  padding: 12px 20px;
+  vertical-align: top;
+}
