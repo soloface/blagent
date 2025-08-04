@@ -47,3 +47,71 @@ Thumbs.db
 
 # Deployment
 .vercel
+
+
+
+从截图可以看到：
+
+**✅ 成功推送的文件：**
+- `api/` - API 接口文件
+- `node_modules/` - 依赖包（注意：通常应该在 .gitignore 中）
+- `public/` - 静态资源
+- `src/` - 源代码
+- 各种配置文件（package.json, vite.config.js 等）
+
+**📈 项目统计：**
+- 5 次提交
+- 主要语言：Shell (49.6%), JavaScript (27.5%), CSS (25.1%), HTML (0.8%)
+
+## 💡 建议优化
+
+### 1. 更新 .gitignore
+我注意到 `node_modules` 被推送了，建议更新 `.gitignore`：
+```
+# Dependencies
+node_modules/
+node_modules 2/
+
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Vercel
+.vercel
+```
